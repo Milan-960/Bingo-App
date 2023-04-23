@@ -71,6 +71,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Here are the links to the branches!
 
-[Master](https://github.com/Milan-960/Holiday-search)
+[Master](https://github.com/Milan-960/Bingo-App)
 
-[Develop](https://github.com/Milan-960/Holiday-search/tree/develop)
+[Develop](https://github.com/Milan-960/Bingo-App/tree/develop)
