@@ -1,12 +1,23 @@
 import React from "react";
-import "./App.css";
+import { useTheme } from "./theme/ThemeContext";
 
-function App() {
+import "./styles/Globle.scss";
+import BingoCard from "./components/BingoCard";
+
+const App = () => {
+  const { theme, renderThemeToggleButton } = useTheme();
+
   return (
-    <div className="App">
-      <h1>Video Conference Bingo</h1>
-    </div>
+    <>
+      <div className={`container ${theme}`}>
+        <div className="App">
+          {renderThemeToggleButton()}
+          <h1>Video Conference Bingo</h1>
+          <BingoCard />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;

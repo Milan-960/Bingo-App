@@ -1,0 +1,10 @@
+//All import for the style
+@import "./theme";
+@import "./app";
+
+// color variables
+@import "./variables";
+
+// component
+@import "./components/index.scss";
+@import "./animations/index.scss";
