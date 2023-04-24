@@ -1,5 +1,11 @@
+import useSound from "use-sound";
+import selectSound from "../sounds/click.mp3";
+
 const BingoCell = ({ phrase, onClick, active, win }) => {
+  const [playSelect] = useSound(selectSound);
+
   const handleClick = () => {
+    playSelect();
     onClick();
   };
 

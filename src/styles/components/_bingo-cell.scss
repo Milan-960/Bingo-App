@@ -83,6 +83,10 @@
   }
 }
 @media (max-width: 320px) {
+  .bingo-card .bingo-cell:nth-child(13):before {
+    width: 60px;
+    height: 60px;
+  }
   .bingo-cell {
     width: 60px;
     height: 60px;

@@ -50,7 +50,7 @@ const BingoCard = () => {
       playRandomExplosionSound(4);
     }
     prevWinLinesLengthRef.current = newWinLines.length;
-  }, [checkBingo, playRandomExplosionSound]);
+  }, [cells, checkBingo, playRandomExplosionSound]);
 
   // Call generateRandomCard when the component is mounted
   useEffect(() => {
