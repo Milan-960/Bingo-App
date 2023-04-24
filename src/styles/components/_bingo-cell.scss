@@ -70,6 +70,11 @@
 // Media queries for responsiveness
 
 @media (max-width: 480px) {
+  .bingo-card .bingo-cell:nth-child(13):before {
+    width: 75px;
+    height: 75px;
+  }
+
   .bingo-cell {
     width: 75px;
     height: 75px;
