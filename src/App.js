@@ -2,6 +2,7 @@ import React from "react";
 import { useTheme } from "./theme/ThemeContext";
 
 import "./styles/Globle.scss";
+import BingoCard from "./components/BingoCard";
 
 const App = () => {
   const { theme, renderThemeToggleButton } = useTheme();
@@ -12,6 +13,7 @@ const App = () => {
         <div className="App">
           {renderThemeToggleButton()}
           <h1>Video Conference Bingo</h1>
+          <BingoCard />
         </div>
       </div>
     </>
