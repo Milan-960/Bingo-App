@@ -2,12 +2,16 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import BingoCell from "./BingoCell";
 import useCardPhrases from "../hooks/useCardPhrases";
+import useWinSounds from "../hooks/useWinSounds";
+import FireworksDisplay from "../animations/FireworksDisplay";
+import WinAnimation from "../animations/WinAnimation";
 
 const BingoCard = () => {
   const { cardPhrases, generateRandomCard } = useCardPhrases();
   const [cells, setCells] = useState(Array(25).fill(false));
   const [winLines, setWinLines] = useState([]);
   const prevWinLinesLengthRef = useRef(0);
+  const playRandomExplosionSound = useWinSounds();
 
   const toggleCell = (index) => {
     if (index === 12) return; // free slot
@@ -42,9 +46,13 @@ const BingoCard = () => {
     const newWinLines = checkBingo();
     setWinLines(newWinLines);
 
+    if (newWinLines.length > prevWinLinesLengthRef.current) {
+      playRandomExplosionSound(4);
+    }
     prevWinLinesLengthRef.current = newWinLines.length;
-  }, [checkBingo]);
+  }, [checkBingo, playRandomExplosionSound]);
 
+  // Call generateRandomCard when the component is mounted
   useEffect(() => {
     generateRandomCard();
   }, [generateRandomCard]);
@@ -66,8 +74,10 @@ const BingoCard = () => {
       </div>
       {winLines.length > 0 && (
         <>
+          {/* Added winLines.length as key to WinAnimation */}
           <div key={winLines.length}>
-            <h3>You win!</h3>
+            <WinAnimation show={winLines.length > 0} />
+            <FireworksDisplay show={winLines.length > 0} />
           </div>
         </>
       )}

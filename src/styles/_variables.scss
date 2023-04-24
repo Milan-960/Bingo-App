@@ -2,9 +2,15 @@
 .light {
   --txt: #000;
   --background-color: #fff;
+
+  --bingo-cell-bg: #f0f0f0;
+  --bingo-cell-win: #ccffcc;
 }
 
 .dark {
   --txt: #fff;
   --background-color: #000;
+
+  --bingo-cell-bg: #ffffff;
+  --bingo-cell-win: #ccffcc;
 }
