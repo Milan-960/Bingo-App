@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   word-wrap: break-word;
-  font-size: 17px;
+  font-size: 16px;
   border: solid 1px black;
   transition: all 0.3s;
   cursor: pointer;
@@ -22,10 +22,8 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
-
-  span {
-    font-family: ui-monospace;
-  }
+  padding: 0 5px;
+  hyphens: auto;
 }
 
 // This is to target the middel
@@ -95,8 +93,8 @@
   .bingo-cell-span {
     width: 70px;
     height: 65px;
-    padding: 0px;
-    font-size: 8px;
+    padding: 2.5px 5px; // Update this line
+    font-size: 9px;
   }
 }
 
@@ -115,5 +113,6 @@
   .bingo-cell-span {
     width: 55px;
     height: 55px;
+    padding: 2.5px 5px;
   }
 }

@@ -3,19 +3,15 @@ import { useTheme } from "./theme/ThemeContext";
 
 import "./styles/Globle.scss";
 import BingoCard from "./components/BingoCard";
-
+import Navbar from "./components/Navbar";
 const App = () => {
-  const { theme, renderThemeToggleButton } = useTheme();
+  const { theme } = useTheme();
 
   return (
     <>
       <div className={`container ${theme}`}>
+        <Navbar />
         <div className="App-wrapper">
-          <div className="App-theme">
-            {renderThemeToggleButton()}
-            <h1>Video Conference Bingo</h1>
-          </div>
-
           <BingoCard />
         </div>
       </div>
