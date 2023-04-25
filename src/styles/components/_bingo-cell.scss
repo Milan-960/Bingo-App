@@ -2,7 +2,7 @@
   position: relative;
   background-color: var(--bingo-cell-bg);
   border-radius: 5px;
-  padding: 1rem;
+  padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +13,16 @@
   border: solid 1px black;
   transition: all 0.3s;
   cursor: pointer;
+}
+
+.bingo-cell-span {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 
   span {
     font-family: ui-monospace;
@@ -27,6 +37,18 @@
 .bingo-card .bingo-cell.active:nth-child(13) {
   text-decoration: none;
   background-color: var(--bingo-cell-bg);
+
+  .bingo-cell-span {
+    background-color: var(--bingo-cell-bg);
+    span {
+      opacity: 1;
+    }
+  }
+}
+
+.bingo-cell.active:nth-child(13) .bingo-cell-span {
+  text-decoration: none;
+  background-color: transparent;
 }
 
 .bingo-card .bingo-cell:nth-child(13):before {
@@ -38,58 +60,61 @@
   height: 150px;
   border: 3px solid black;
   border-radius: 50%;
+  z-index: 999;
 }
 
 .bingo-cell.active {
   text-decoration: line-through;
-  background-color: #c5c5c5;
-}
 
-.bingo-cell.win {
-  background-color: var(--bingo-cell-win);
-}
+  .bingo-cell-span {
+    background: rgba(197, 197, 197, 0.5);
 
-.bingo-cell:active::after {
-  width: 200px;
-  height: 200px;
-  opacity: 1;
-  transition: all 0.5s ease;
-  animation: ripple 0.5s linear;
-}
-
-@keyframes ripple {
-  from {
-    transform: scale(0);
+    span {
+      opacity: 0.4;
+    }
   }
-  to {
-    transform: scale(1);
-    opacity: 0;
+
+  .bingo-cell-span.win {
+    background: var(--bingo-cell-win);
   }
 }
 
 // Media queries for responsiveness
 
 @media (max-width: 480px) {
+  .bingo-cell {
+    width: 75px;
+    height: 75px;
+    font-size: 8px;
+    padding: 3px;
+  }
+
   .bingo-card .bingo-cell:nth-child(13):before {
     width: 75px;
     height: 75px;
   }
 
-  .bingo-cell {
-    width: 75px;
-    height: 75px;
-    font-size: 8px;
-    padding: 5px;
+  .bingo-cell-span {
+    width: 70px;
+    height: 70px;
+    padding: 2px;
   }
 }
+
 @media (max-width: 320px) {
+  .bingo-cell {
+    width: 60px;
+    height: 60px;
+    font-size: 8px;
+  }
+
   .bingo-card .bingo-cell:nth-child(13):before {
     width: 60px;
     height: 60px;
   }
-  .bingo-cell {
-    width: 60px;
-    height: 60px;
-    font-size: 8px;
+
+  .bingo-cell-span {
+    width: 55px;
+    height: 55px;
   }
 }

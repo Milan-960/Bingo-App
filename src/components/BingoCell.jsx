@@ -1,4 +1,6 @@
 import useSound from "use-sound";
+import Ink from "react-ink";
+
 import selectSound from "../sounds/click.mp3";
 
 const BingoCell = ({ phrase, onClick, active, win }) => {
@@ -12,10 +14,13 @@ const BingoCell = ({ phrase, onClick, active, win }) => {
   return (
     <>
       <div
-        className={`bingo-cell ${active ? "active" : ""} ${win ? "win" : ""}`}
+        className={`bingo-cell ${active ? "active" : ""}`}
         onClick={handleClick}
       >
-        <span>{phrase}</span>
+        <div className={`bingo-cell-span ${win ? "win" : ""}`}>
+          <span>{phrase}</span>
+          <Ink />
+        </div>
       </div>
     </>
   );
