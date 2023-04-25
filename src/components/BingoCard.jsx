@@ -52,9 +52,12 @@ const BingoCard = () => {
     setWinLines(newWinLines);
   }, [cells, checkBingo, playRandomExplosionSound]);
 
-  // Play a sound when there's a change in winLines (new win or deselection)
+  // Play sound if the number of winLines has increased or decreased, but not when it becomes 0
   useEffect(() => {
-    if (JSON.stringify(winLines) !== JSON.stringify(prevWinLinesLengthRef.current)) {
+    if (
+      winLines.length !== prevWinLinesLengthRef.current.length &&
+      winLines.length !== 0
+    ) {
       playRandomExplosionSound(4);
     }
     prevWinLinesLengthRef.current = winLines;
