@@ -50,11 +50,11 @@ npm start
 
 ### Technologies which have been used 🔥
 
-- [ReactJS](https://react.dev/)
-- [React-Sounds](https://www.npmjs.com/package/react-sound)
-- [Fireworks](https://www.npmjs.com/package/@fireworks-js/react)
-- [React-icons](https://react-icons.github.io/react-icons/)
-- [GSAP](https://greensock.com/gsap/)
+- [ReactJS](https://react.dev/) SPA
+- [React-Sounds](https://www.npmjs.com/package/react-sound) To Provide better user experience!
+- [Fireworks](https://www.npmjs.com/package/@fireworks-js/react) To Provide better user experience when they win the game!
+- [React-icons](https://react-icons.github.io/react-icons/) Used for a ICONS insted using PNG
+- [GSAP](https://greensock.com/gsap/) Used for cool animation!
 
 ## Here are the links to the branches!
 
