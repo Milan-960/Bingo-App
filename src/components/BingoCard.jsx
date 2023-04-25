@@ -11,8 +11,10 @@ const BingoCard = () => {
   const [cells, setCells] = useState(Array(25).fill(false));
   const [winLines, setWinLines] = useState([]);
   const prevWinLinesLengthRef = useRef(0);
+  // Pass winLines as an argument to play sounds only when there's a change in winLines
   const playRandomExplosionSound = useWinSounds();
 
+  // Function to toggle cell state (active/inactive) upon click
   const toggleCell = (index) => {
     if (index === 12) return; // free slot
     const newCells = [...cells];
@@ -36,21 +38,27 @@ const BingoCard = () => {
       [4, 8, 12, 16, 20],
     ];
 
+    // Determine winning lines by checking if all cells in a line are active
     const winningLines = lines.filter((line) =>
       line.every((index) => cells[index] || index === 12)
     );
     return winningLines;
   }, [cells]);
 
+  //* Must have to use three useEffect
+  // Update winLines state whenever cells state changes
   useEffect(() => {
     const newWinLines = checkBingo();
     setWinLines(newWinLines);
+  }, [cells, checkBingo, playRandomExplosionSound]);
 
-    if (newWinLines.length > prevWinLinesLengthRef.current) {
+  // Play a sound when there's a change in winLines (new win or deselection)
+  useEffect(() => {
+    if (JSON.stringify(winLines) !== JSON.stringify(prevWinLinesLengthRef.current)) {
       playRandomExplosionSound(4);
     }
-    prevWinLinesLengthRef.current = newWinLines.length;
-  }, [checkBingo, playRandomExplosionSound]);
+    prevWinLinesLengthRef.current = winLines;
+  }, [winLines, playRandomExplosionSound]);
 
   // Call generateRandomCard when the component is mounted
   useEffect(() => {
