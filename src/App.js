@@ -10,9 +10,12 @@ const App = () => {
   return (
     <>
       <div className={`container ${theme}`}>
-        <div className="App">
-          {renderThemeToggleButton()}
-          <h1>Video Conference Bingo</h1>
+        <div className="App-wrapper">
+          <div className="App-theme">
+            {renderThemeToggleButton()}
+            <h1>Video Conference Bingo</h1>
+          </div>
+
           <BingoCard />
         </div>
       </div>

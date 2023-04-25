@@ -70,17 +70,19 @@ const BingoCard = () => {
 
   return (
     <>
-      <div className="bingo-container">
-        <div className={`bingo-card ${winLines.length > 0 ? "win" : ""}`}>
-          {cardPhrases.map((phrase, index) => (
-            <BingoCell
-              key={index}
-              phrase={phrase}
-              onClick={() => toggleCell(index)}
-              active={index === 12 || cells[index]}
-              win={winLines.some((line) => line.includes(index))}
-            />
-          ))}
+      <div className="bingo-wrapper">
+        <div className="bingo-container">
+          <div className={`bingo-card ${winLines.length > 0 ? "win" : ""}`}>
+            {cardPhrases.map((phrase, index) => (
+              <BingoCell
+                key={index}
+                phrase={phrase}
+                onClick={() => toggleCell(index)}
+                active={index === 12 || cells[index]}
+                win={winLines.some((line) => line.includes(index))}
+              />
+            ))}
+          </div>
         </div>
       </div>
       {winLines.length > 0 && (

@@ -6,10 +6,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 150px;
-  height: 150px;
   word-wrap: break-word;
-  font-size: 19px;
+  font-size: 17px;
   border: solid 1px black;
   transition: all 0.3s;
   cursor: pointer;
@@ -17,11 +15,12 @@
 
 .bingo-cell-span {
   position: relative;
-  width: 140px;
-  height: 140px;
+  width: 135px;
+  height: 135px;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   z-index: 1;
 
   span {
@@ -56,8 +55,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 150px;
-  height: 150px;
+  width: 145px;
+  height: 145px;
   border: 3px solid black;
   border-radius: 50%;
   z-index: 999;
@@ -83,21 +82,21 @@
 
 @media (max-width: 480px) {
   .bingo-cell {
-    width: 75px;
-    height: 75px;
-    font-size: 8px;
-    padding: 3px;
+    width: 72px;
+    height: 72px;
+    padding: 2px;
   }
 
   .bingo-card .bingo-cell:nth-child(13):before {
-    width: 75px;
-    height: 75px;
+    width: 72px;
+    height: 72px;
   }
 
   .bingo-cell-span {
     width: 70px;
-    height: 70px;
-    padding: 2px;
+    height: 65px;
+    padding: 0px;
+    font-size: 8px;
   }
 }
 
