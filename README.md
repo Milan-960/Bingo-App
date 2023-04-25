@@ -55,6 +55,7 @@ npm start
 - [Fireworks](https://www.npmjs.com/package/@fireworks-js/react) To Provide better user experience when they win the game!
 - [React-icons](https://react-icons.github.io/react-icons/) Used for a ICONS insted using PNG
 - [GSAP](https://greensock.com/gsap/) Used for cool animation!
+- [React-ink](https://www.npmjs.com/package/react-ink) For Ripple effect in the Bingo-Cell
 
 ## Here are the links to the branches!
 
