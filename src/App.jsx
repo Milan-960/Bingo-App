@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useTheme } from "./theme/ThemeContext";
 
 import "./styles/Globle.scss";
@@ -9,7 +10,7 @@ const App = () => {
 
   return (
     <>
-      <div className={`container ${theme}`}>
+      <div className={`appContainer ${theme}`}>
         <Navbar />
         <div className="App-wrapper">
           <BingoCard />

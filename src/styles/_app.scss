@@ -1,12 +1,12 @@
-.container.light {
+.appContainer.light {
   background-color: var(--background-color);
 }
 
-.container.dark {
+.appContainer.dark {
   background-color: var(--background-color);
 }
 
-.container {
+.appContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -21,4 +21,5 @@
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  padding: 0 15px; // Add padding to give some space around the bingo card
 }
