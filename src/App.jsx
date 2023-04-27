@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "@mui/material";
+
 import { useTheme } from "./theme/ThemeContext";
 
 import "./styles/Globle.scss";
@@ -13,9 +13,7 @@ const App = () => {
       <div className={`appContainer ${theme}`}>
         <Navbar />
         <div className="App-wrapper">
-          <Container maxWidth="sm">
-            <BingoCard />
-          </Container>
+          <BingoCard />
         </div>
       </div>
     </>

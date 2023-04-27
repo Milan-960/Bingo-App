@@ -5,23 +5,13 @@ import App from "./App";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "./theme/ThemeContext";
-import {
-  createTheme,
-  ThemeProvider as MuiThemeProvider,
-} from "@mui/material/styles";
-
-const muiTheme = createTheme({
-  // You can customize your theme here
-});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <MuiThemeProvider theme={muiTheme}>
-      <ThemeProvider>
-        <App />
-      </ThemeProvider>
-    </MuiThemeProvider>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 

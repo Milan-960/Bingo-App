@@ -12,19 +12,17 @@ const BingoCell = ({ phrase, onClick, active, win, fixedSize }) => {
   };
 
   return (
-    <>
-      <div
-        className={`bingo-cell ${active ? "active" : ""} ${
-          fixedSize ? "bingo-cell-size" : ""
-        }`}
-        onClick={handleClick}
-      >
-        <div className={`bingo-cell-span ${win ? "win" : ""}`}>
-          <span>{phrase}</span>
-          <Ink />
-        </div>
+    <div
+      className={`bingo-cell ${active ? "active" : ""} ${
+        fixedSize ? "bingo-cell-size" : ""
+      }`}
+      onClick={handleClick}
+    >
+      <div className={`bingo-cell-span ${win ? "win" : ""}`}>
+        <span>{phrase}</span>
+        <Ink />
       </div>
-    </>
+    </div>
   );
 };
 
