@@ -11,19 +11,30 @@
   border: solid 1px black;
   transition: all 0.3s;
   cursor: pointer;
+
+  // To Fix the width of the bingo-cells when we shrink the browser
+  width: calc(90vw / 5);
+  height: calc(90vw / 5);
+  max-width: calc(90vh / 5);
+  max-height: calc(90vh / 5);
+}
+
+.bingo-cell-size {
+  width: 135px;
+  height: 135px;
 }
 
 .bingo-cell-span {
-  position: relative;
-  width: 135px;
-  height: 135px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   z-index: 1;
   padding: 0 5px;
+  -webkit-hyphens: auto;
   hyphens: auto;
+  width: 100%;
+  height: 100%;
 }
 
 // This is to target the middel
@@ -53,8 +64,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 145px;
-  height: 145px;
+  width: 100%;
+  height: 100%;
   border: 3px solid black;
   border-radius: 50%;
   z-index: 999;
