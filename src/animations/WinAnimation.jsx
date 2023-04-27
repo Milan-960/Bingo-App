@@ -45,7 +45,7 @@ const WinAnimation = ({ show }) => {
     >
       {messageVisible && (
         <div ref={animationRef} className="win-message">
-          🎉 You won The Game! 🎉
+          <span> 🎉 You won The Game! 🎉 </span>
         </div>
       )}
     </div>
