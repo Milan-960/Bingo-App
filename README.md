@@ -2,6 +2,70 @@
 
 - [Live-Demo](https://bingo-apps.vercel.app/)
 
+# Folder Structure
+
+```
+📦bingo-react-app
+ ┣ 📂public
+ ┃ ┣ 📜favicon.ico
+ ┃ ┣ 📜index.html
+ ┃ ┣ 📜logo192.png
+ ┃ ┣ 📜logo512.png
+ ┃ ┣ 📜manifest.json
+ ┃ ┗ 📜robots.txt
+ ┣ 📂src
+ ┃ ┣ 📂animations
+ ┃ ┃ ┣ 📜FireworksDisplay.jsx
+ ┃ ┃ ┗ 📜WinAnimation.jsx
+ ┃ ┣ 📂components
+ ┃ ┃ ┣ 📜BingoCard.jsx
+ ┃ ┃ ┣ 📜BingoCell.jsx
+ ┃ ┃ ┗ 📜Navbar.jsx
+ ┃ ┣ 📂hooks
+ ┃ ┃ ┣ 📜useCardPhrases.jsx
+ ┃ ┃ ┗ 📜useWinSounds.jsx
+ ┃ ┣ 📂sounds
+ ┃ ┃ ┣ 📜click.mp3
+ ┃ ┃ ┣ 📜explosion0.mp3
+ ┃ ┃ ┣ 📜explosion1.mp3
+ ┃ ┃ ┣ 📜explosion2.mp3
+ ┃ ┃ ┗ 📜explosion3.mp3
+ ┃ ┣ 📂styles
+ ┃ ┃ ┣ 📂animations
+ ┃ ┃ ┃ ┣ 📜_fire-works.scss
+ ┃ ┃ ┃ ┣ 📜_win-animation.scss
+ ┃ ┃ ┃ ┗ 📜index.scss
+ ┃ ┃ ┣ 📂components
+ ┃ ┃ ┃ ┣ 📜_bingo-card.scss
+ ┃ ┃ ┃ ┣ 📜_bingo-cell.scss
+ ┃ ┃ ┃ ┣ 📜_navbar.scss
+ ┃ ┃ ┃ ┗ 📜index.scss
+ ┃ ┃ ┣ 📜.DS_Store
+ ┃ ┃ ┣ 📜Globle.scss
+ ┃ ┃ ┣ 📜_app.scss
+ ┃ ┃ ┣ 📜_main.scss
+ ┃ ┃ ┣ 📜_theme.scss
+ ┃ ┃ ┗ 📜_variables.scss
+ ┃ ┣ 📂theme
+ ┃ ┃ ┗ 📜ThemeContext.jsx
+ ┃ ┣ 📂utils
+ ┃ ┃ ┗ 📜Phrases.js
+ ┃ ┣ 📜.DS_Store
+ ┃ ┣ 📜App.jsx
+ ┃ ┣ 📜App.test.js
+ ┃ ┣ 📜index.css
+ ┃ ┣ 📜index.js
+ ┃ ┣ 📜logo.svg
+ ┃ ┣ 📜reportWebVitals.js
+ ┃ ┣ 📜service-worker.js
+ ┃ ┣ 📜serviceWorkerRegistration.js
+ ┃ ┗ 📜setupTests.js
+ ┣ 📜.DS_Store
+ ┣ 📜.gitignore
+ ┣ 📜README.md
+ ┗ 📜package.json
+```
+
 # Light Mode
 
 <img align="right" src="./SS/light.png" width="100%"/>&nbsp;
